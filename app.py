@@ -17,9 +17,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 
 import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
 stop_words = set(stopwords.words('english'))
 
 df1 = pd.read_csv('amazon_alexa.tsv',sep='\t',usecols=['rating','verified_reviews'])
