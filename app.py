@@ -22,11 +22,11 @@ nltk.download('punkt')
 nltk.download('wordnet')
 stop_words = set(stopwords.words('english'))
 
-df1 = pd.read_csv('/content/gdrive/MyDrive/Kaggle/amazon_alexa.tsv',sep='\t',usecols=['rating','verified_reviews'])
+df1 = pd.read_csv('amazon_alexa.tsv',sep='\t',usecols=['rating','verified_reviews'])
 df1.columns = ['rating','review']
 
 
-df2 = pd.read_csv('/content/gdrive/MyDrive/Kaggle/flipkart_reviews_dataset.csv',usecols=['rating','review'])
+df2 = pd.read_csv('flipkart_reviews_dataset.csv',usecols=['rating','review'])
 
 
 frames = [df1,df2]
