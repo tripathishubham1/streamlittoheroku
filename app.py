@@ -72,22 +72,6 @@ clf.fit(X_train, y_train)
 
 y_pred = clf.predict(X_test)
 
-import preprocess_kgptalkie as pt
-import re
-def get_clean(x):
-    x = str(x).lower().replace('\\', '').replace('_', ' ')
-    x = pt.cont_exp(x)
-    x = pt.remove_emails(x)
-    x = pt.remove_urls(x)
-    x = pt.remove_html_tags(x)
-    x = pt.remove_rt(x)
-    x = pt.remove_accented_chars(x)
-    x = pt.remove_special_chars(x)
-    x = re.sub("(.)\\1{2,}", "\\1", x)
-    return x
-
-
-
 page_bg_img = '''
 <style>
 body {
@@ -104,7 +88,7 @@ st.image('—Pngtree—shopping on mobile_5354478.png', caption=None, width=200,
 
 
 user_input = st.text_input("Input Review : ")
-k = get_clean(user_input)
+k = preprocessing(user_input)
 l = tfidf.transform([k])
 t = clf.predict(l)
 t = int(t)
