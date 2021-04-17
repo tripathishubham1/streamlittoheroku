@@ -82,7 +82,7 @@ background-size: cover;
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-st.title("Flipkart Rating Prediction 😢🙂😊 \n",)
+st.title("Rating Predictor 😢🙂😊 \n",)
 st.image('—Pngtree—shopping on mobile_5354478.png', caption=None, width=200, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 
 
