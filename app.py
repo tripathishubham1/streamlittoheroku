@@ -84,7 +84,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Rating Predictor 😢🙂😊 \n",)
 st.image('—Pngtree—shopping on mobile_5354478.png', caption=None, width=200, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-st.text('input text eg. your product is very good,worst product ever etc.')
+
 
 user_input = st.text_input("Input Review : ")
 k = preprocessing(user_input)
@@ -92,3 +92,5 @@ l = tfidf.transform([k])
 t = clf.predict(l)
 t = int(t)
 st.write(f'Rating : ',t,'⭐')
+
+st.text('input text eg. your product is very good,worst product ever etc.')
