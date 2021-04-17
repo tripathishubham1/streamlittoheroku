@@ -13,7 +13,6 @@ pandas-gbq==0.13.3
 pandas-profiling==1.4.1
 pickleshare==0.7.5
 pip-tools==4.5.1
-preprocess-kgptalkie==0.1.3
 requests==2.23.0
 requests-oauthlib==1.3.0
 scikit-image==0.16.2
